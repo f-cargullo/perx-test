@@ -1,0 +1,30 @@
+<div class="container-fluid px-0">
+    <mat-drawer-container class="vh-100 bg-transparent" autosize>
+        <mat-drawer class="w-25" #drawer mode="side">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="pt-5">MENU</h2>
+                        <ul class="nav nav-pills flex-column pt-4">
+                            <li class="nav-item">
+                                <a class="nav-link" [routerLinkActive]="['active']" routerLink="/demo/demo-list">List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" [routerLinkActive]="['active']" routerLink="/demo/demo-directive">Directive</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </mat-drawer>
+      
+        <div>
+            <button type="button" class="btn btn-lg btn-primary rounded-0" (click)="drawer.toggle()">
+                <i class="bi-list"></i>
+            </button>
+        </div>
+
+        <router-outlet></router-outlet>
+      
+    </mat-drawer-container>
+</div>
